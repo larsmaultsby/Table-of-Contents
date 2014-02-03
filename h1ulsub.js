@@ -22,7 +22,7 @@ for (k in $div) {
         }
     }
     if ($div.eq(k).prop("tagName") === 'H2') {
-        if ($div.eq(k).prev().prop("tagName") != 'H2' && $div.eq(k).prev().prop("tagName") != 'H2') {
+        if ($div.eq(k).prev().prop("tagName") != 'H2') {
             $container
                 .children('ul.parent')
                 .append('<ul/>')
