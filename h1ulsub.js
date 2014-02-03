@@ -9,7 +9,7 @@ var $container = $('<div/>');
 var $div = $(tableOcontents.selector).eq(0).children();
 for (k in $div) {
     if ($div.eq(k).prop("tagName") === 'H1') {
-        if ($div.eq(k).prev().prop("tagName") != 'H1' && $div.eq(k).prev().prop("tagName") != 'H2' && !$container.children('ul').hasClass('parent')) {
+        if ($div.eq(k).prev().prop("tagName") != 'H1' && $div.eq(k).prev().prop("tagName") != 'H3' && $div.eq(k).prev().prop("tagName") != 'H2' && !$container.children('ul').hasClass('parent')) {
             $container
                 .append('<ul/>')
                 .children('ul')
@@ -36,6 +36,22 @@ for (k in $div) {
                 .append('<li>' + $div.eq(k).html() + '</li>')
         }
     }
+    //  if ($div.eq(k).prop("tagName") === 'H3') {
+    //      if ($div.eq(k).prev().prop("tagName") != 'H3') {
+    //         $container
+    //             .children('ul.parent')
+    //             .append('<ul/>')
+    //             .children('ul')
+    //             .addClass('nested')
+    //             .append('<li>' + $div.eq(k).html() + '</li>')
+    //     } else {
+    //         $container
+    //             .children('ul.parent')
+    //             .children('ul.nested')
+    //             .append('<li>' + $div.eq(k).html() + '</li>')
+    //     }
+    //  }
+    
 }
     $(tableOcontents.appendToSelector).append($container)
 }
